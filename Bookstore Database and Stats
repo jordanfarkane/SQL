@@ -1,0 +1,25 @@
+-- Create a bookstore database
+
+CREATE TABLE items(id INTEGER PRIMARY KEY, item TEXT, cost NUMERIC, sell_price NUMERIC, quantity_in_stock INTEGER);
+
+INSERT INTO items VALUES(1, "Thumbelina", 2.99, 7.99, 5);
+INSERT INTO items VALUES(2, "Rapunzel", 3.59, 8.99, 10);
+INSERT INTO items VALUES(3, "The Twelve Dancing Princesses", 4.50, 10.99, 13);
+INSERT INTO items VALUES(4, "The Princess and the Frog", 2.99, 8.99, 3);
+INSERT INTO items VALUES(5, "Sleeping Beauty", 1.99, 5.99, 9);
+INSERT INTO items VALUES(6, "Peter Pan", 2.99, 7.99, 10);
+INSERT INTO items VALUES(7, "Hansel and Gretel", 3.99, 8.99, 4);
+INSERT INTO items VALUES(8, "Snow White and the Seven Dwarves", 4.99, 11.99, 8);
+INSERT INTO items VALUES(9, "The Little Mermaid", 3.99, 9.99, 6);
+INSERT INTO items VALUES(10, "Aladdin", 2.99, 11.99, 10);
+INSERT INTO items VALUES(11, "Pinnochio", 3.99, 7.99, 2);
+INSERT INTO items VALUES(12, "Hercules", 2.99, 8.99, 4);
+INSERT INTO items VALUES(13, "Cinderella", 4.99, 8.99, 8);
+INSERT INTO items VALUES(14, "Beauty and the Beast", 3.99, 10.99, 9);
+INSERT INTO items VALUES(15, "Anastasia", 2.99, 8.99, 4);
+
+-- Display the name of the books sold in the store ordered by their sell price
+SELECT item, sell_price FROM items ORDER BY sell_price;
+
+-- Display the sum of the sell price of all books
+SELECT SUM(sell_price) FROM items;
